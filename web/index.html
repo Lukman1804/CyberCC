@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Role</title>
+    <style>
+        body {
+            background-color: #1e1e2f;
+            color: #d1d5db;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        form {
+            margin: 0;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-weight: bold;
+            color: white;
+        }
+
+        .admin-btn {
+            background-color: #10a37f;
+        }
+
+        .admin-btn:hover {
+            background-color: #0e8d6e;
+        }
+
+        .client-btn {
+            background-color: #2e7dba;
+        }
+
+        .client-btn:hover {
+            background-color: #24689c;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <!-- Admin Button Form -->
+        <form action="adminLogin.jsp" method="post">
+            <input type="hidden" name="role" value="admin">
+            <input type="hidden" name="usermode" value="login">
+            <button type="submit" class="btn admin-btn">Admin</button>
+        </form>
+
+        <!-- Client Button Form -->
+        <form action="clientLogin.jsp" method="post">
+            <input type="hidden" name="role" value="client">
+            <input type="hidden" name="usermode" value="login">
+            <button type="submit" class="btn client-btn">Client</button>
+        </form>
+    </div>
+</body>
+</html>
